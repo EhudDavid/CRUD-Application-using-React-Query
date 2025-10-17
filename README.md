@@ -1,16 +1,29 @@
-# React + Vite
+# React Query Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small demo app showcasing common data-fetching patterns with @tanstack/react-query in a React + Vite project.  
+It includes examples of regular fetches, React Query-powered fetching, manual (button) fetches, pagination, infinite scroll, `useQueries` usage, and a tiny CRUD demo backed by `json-server`.
 
-Currently, two official plugins are available:
+## Features
+- Basic axios fetch and display
+- `useQuery` examples with loading/error handling
+- Manual fetching using `enabled: false` + `refetch()`
+- `useQueries` to fetch multiple resources in parallel
+- Pagination example using query keys and `keepPreviousData`
+- Infinite scroll examples using `useInfiniteQuery`
+- Simple CRUD (create/update/delete) demo integrated with React Query mutations
+- Local fake API using `json-server` (`db.json`)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech stack
+- React (v19)
+- Vite
+- @tanstack/react-query (+ devtools)
+- axios
+- json-server (for local API)
+- Optional: Tailwind/tailwind plugin present in configuration
 
-## React Compiler
+## Getting started (local)
+Prerequisites: Node.js and npm installed.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Install dependencies
+```cmd
+npm install
